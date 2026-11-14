@@ -96,7 +96,7 @@ npm run test:watch
 
 Rangkaian pengujian mencakup unit test untuk setiap lapisan dan property-based test (menggunakan fast-check) untuk invarian domain seperti keunikan pengenal, involusi penandaan status, round-trip persistensi, dan ketahanan terhadap data rusak.
 
-## Catatan Perilaku
+## Catatan
 
 - Teks tugas valid: 3 sampai 50 karakter setelah pemangkasan spasi.
 - Daftar dirender hingga maksimum 1000 tugas.
