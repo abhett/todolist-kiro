@@ -1,6 +1,6 @@
 ﻿# Todolist App
 
-Aplikasi todolist sederhana berbasis frontend yang berjalan sepenuhnya di peramban tanpa backend. Pengguna dapat mencatat, menandai, mengedit, dan menghapus tugas harian. Seluruh data disimpan secara lokal menggunakan `localStorage`, sehingga tetap tersedia setelah halaman dimuat ulang atau ditutup.
+Aplikasi todolist sederhana berbasis frontend yang berjalan tanpa backend. Pengguna dapat mencatat, menandai, mengedit, dan menghapus tugas harian. Seluruh data disimpan secara lokal menggunakan `localStorage`, sehingga tetap tersedia setelah halaman dimuat ulang atau ditutup.
 
 Proyek dibangun dengan vanilla JavaScript (ES Modules), HTML, dan CSS, tanpa framework. Arsitekturnya memisahkan logika domain murni dari persistensi dan presentasi, dan diverifikasi oleh rangkaian pengujian unit serta property-based testing.
 
