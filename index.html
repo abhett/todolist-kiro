@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo_App</title>
+    <!--
+      Entry point UI untuk Todo_App (Req 1.1, 2.1, 2.2).
+
+      Selector yang di-query oleh controller (src/app.js) dan dipakai view.js.
+      app.js masih placeholder, sehingga id berikut ditetapkan di sini sebagai
+      kontrak yang jelas untuk Task 7 (wiring controller):
+
+        #task-form   : <form> pengiriman Task_Text baru (submit = tambah).
+        #task-input  : <input> Task_Text; memakai kelas .nb-input.
+        #task-list   : <ul> kontainer daftar Task; diteruskan ke
+                       view.renderTaskList(container, ...) yang meng-append
+                       <li class="nb-card task-item"> untuk tiap Task.
+        #nb-error-area : <div class="nb-error"> area pesan error. Id & kelas
+                       cocok dengan view.showError(), yang me-reuse elemen ini
+                       lewat getElementById bila sudah ada (non-destruktif).
+    -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      <h1>Todo_App</h1>
+
+      <!-- Form tambah Task: input Task_Text + tombol tambah (Req 1.1). -->
+      <form id="task-form" class="nb-form" autocomplete="off" novalidate>
+        <input
+          id="task-input"
+          name="task-input"
+          type="text"
+          class="nb-input"
+          placeholder="Tambahkan tugas baru…"
+          maxlength="50"
+          aria-label="Teks tugas"
+          aria-describedby="nb-error-area"
+        />
+        <button type="submit" class="nb-btn nb-btn--primary">Tambah</button>
+      </form>
+
+      <!-- Area pesan error non-destruktif; disembunyikan hingga ada pesan. -->
+      <div
+        id="nb-error-area"
+        class="nb-error"
+        role="alert"
+        aria-live="assertive"
+        hidden
+      ></div>
+
+      <!-- Kontainer daftar Task; diisi oleh view.renderTaskList (Req 2.1, 2.2). -->
+      <ul id="task-list" class="nb-list" aria-label="Daftar tugas"></ul>
+    </main>
+
+    <!-- Entry point modul: controller yang menyatukan task/store/view. -->
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
